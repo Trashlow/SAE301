@@ -1,0 +1,72 @@
+/* Styles de base */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Styles du formulaire */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="number"],
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background-color: #d9534f; /* Bootstrap's 'btn-danger' color */
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #c9302c; /* A darker 'btn-danger' color for hover effect */
+}
+
+/* Message d'erreur */
+.error-message {
+    color: #d9534f;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Message de succès */
+.success-message {
+    color: #5cb85c;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 767px) {
+    body {
+        padding: 10px;
+    }
+
+    form {
+        width: 100%;
+    }
+}

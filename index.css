@@ -1,0 +1,229 @@
+/* Reset CSS pour assurer la cohérence entre les navigateurs */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Amélioration des polices et des couleurs */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.8;
+    padding: 20px;
+}
+
+/* Amélioration du conteneur principal */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Style pour le titre principal */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+#searchForm {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+#searchForm select,
+#searchForm input[type="text"],
+#searchForm input[type="submit"] {
+    padding: 12px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#searchForm input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+
+#searchForm input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 20px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.link-footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.link-footer a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.link-footer a:hover {
+    color: #00376b;
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    margin: 20px auto;
+    perspective: 1000px; /* Gives a 3D effect */
+}
+
+.carousel-inner {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%; /* Makes the carousel round */
+    width: 300px; /* Set a specific width */
+    height: 300px; /* Set a specific height */
+    margin: auto;
+}
+
+.carousel-inner img {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area without stretching */
+    border-radius: 50%; /* Makes the images round */
+    opacity: 0.5; /* Makes images a bit transparent */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.carousel-inner img.active {
+    opacity: 1; /* Active image is fully opaque */
+    transform: scale(1.1); /* Active image is slightly scaled */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.carousel-control.prev {
+    left: -60px; /* Adjust as necessary */
+}
+
+.carousel-control.next {
+    right: -60px; /* Adjust as necessary */
+}
+/* Ajustements pour les écrans tactiles et les petits écrans */
+@media (hover: none) {
+    .carousel-control {
+        width: 44px; /* Aire tactile plus grande */
+        height: 44px; /* Aire tactile plus grande */
+        border-radius: 22px; /* Boutons ronds */
+    }
+}
+
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    padding: 10px 20px;
+}
+
+.navbar a.button {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a.button:hover {
+    background-color: #00376b;
+}
+
+/* Search Form Improvements */
+#searchForm input[type="text"] {
+    padding-left: 35px;
+    background: url('search-icon.png') no-repeat 10px center, #fff; /* Replace with actual image path */
+    background-size: 20px;
+}
+
+/* Footer Link Improvements */
+.link-footer a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #0056b3;
+    padding: 5px;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+}
+
+.link-footer a:hover {
+    color: #00376b;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design Improvements */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a.button {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .button-container {
+        justify-content: center;
+    }
+
+    #searchForm {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #searchForm select,
+    #searchForm input[type="text"],
+    #searchForm input[type="submit"] {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

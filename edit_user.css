@@ -1,0 +1,79 @@
+/* Styles de base */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Styles du formulaire */
+form {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="number"],
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in the element's width and height */
+}
+
+input[type="submit"] {
+    background-color: #5cb85c; /* Bootstrap's 'btn-success' color */
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+input[type="submit"]:hover {
+    background-color: #4cae4c; /* A slightly darker 'btn-success' color */
+}
+
+/* Affichage des messages d'erreur ou de confirmation */
+p.message {
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+p.success {
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+}
+
+p.error {
+    background-color: #f2dede;
+    color: #a94442;
+    border: 1px solid #ebccd1;
+}
+
+/* Responsive design pour petits écrans */
+@media (max-width: 767px) {
+    body {
+        padding: 10px;
+    }
+
+    form {
+        width: 100%;
+    }
+}
